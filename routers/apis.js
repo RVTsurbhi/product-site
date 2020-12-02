@@ -30,7 +30,9 @@ router.post('/uploads', upload.array('image'), commonController.uploadImage);
 
 /******* products *******/
 router.post('/product/add', productController.addProduct);
-router.post('/product/edit/:id', productController.editProduct);
-router.post('/product/list', productController.getProductList);
+router.put('/product/edit/:id', productController.editProduct);
+router.get('/product/list', productController.getProductList);
+router.get('/product/detail', productController.getProductById);
+
 
 module.exports = router;
